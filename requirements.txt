@@ -1,0 +1,11 @@
+lightning
+torch
+wandb
+numpy
+pandas
+scipy
+python-dotenv
+tqdm
+yaml
+soundfile
+fairseq
