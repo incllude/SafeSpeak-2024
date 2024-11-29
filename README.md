@@ -41,7 +41,8 @@ During training:
 - For shorter recordings, looping was applied.
 
 I experimented with augmentations from RawBoost, but they did not yield improvements, likely due to instability in convergence and a lack of time for experiments. Comparison of influence of RawBoost augmentations on **EER** metric on validation set for my pipeline illustrated below.
-![](images/image.png)
+
+<img src="images/image.png" width="219" height="189">
 
 ## **4. Model Architecture**
 The backbone of our solution is the **AASIST2** model, enhanced with pretrained representations:
@@ -53,7 +54,7 @@ The backbone of our solution is the **AASIST2** model, enhanced with pretrained 
 I used **Additive Angular Margin Softmax (AM-Softmax)** as in **AASIST2** traning pipeline with scale of 15 and margin of 0.3. Also I experimented with **MSE-based P2SGrad** loss, which did not produce meaningful improvements in my case.
 
 ### **5.2 Optimization**
-- **Optimizer:** Adam with `weight_decay=0.0001`.
+- **Optimizer:** Adam with weight decay of 0.0001.
 - **Learning Rate Scheduler:** CosineAnnealingLR with:
   - Initial learning rate: **0.0001**.
   - Final learning rate: **1e-8**.
