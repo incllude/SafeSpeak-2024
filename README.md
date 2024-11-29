@@ -42,7 +42,7 @@ During training:
 
 I experimented with augmentations from RawBoost, but they did not yield improvements, likely due to instability in convergence and a lack of time for experiments. Comparison of influence of RawBoost augmentations on **EER** metric on validation set for my pipeline illustrated below.
 
-<img src="images/image.png" width="219" height="189">
+<img src="images/image.png" width="438" height="377">
 
 ## **4. Model Architecture**
 The backbone of our solution is the **AASIST2** model, enhanced with pretrained representations:
