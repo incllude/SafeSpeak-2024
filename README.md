@@ -1,4 +1,4 @@
-# SafeSpeak-2024
+# SafeSpeak-2024 6-th Place Solution
 
 ## **1. Introduction**
 Spoofing attacks such as text-to-speech, voice conversion, and replay attacks pose significant challenges to the security of voice-based systems. The SafeSpeak-2024 competition aims to advance anti-spoofing methods by benchmarking solutions on a large-scale dataset using the Equal Error Rate (EER) as the primary evaluation metric.
