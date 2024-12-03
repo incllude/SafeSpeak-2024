@@ -40,7 +40,7 @@ During training:
 - For recordings longer than 64,600 timestamps, a random 64,600 timestamp segment was selected.
 - For shorter recordings, looping was applied.
 
-I experimented with augmentations from RawBoost, but they did not yield improvements, likely due to instability in convergence and a lack of time for experiments. Comparison of influence of RawBoost augmentations on **EER** metric on validation set for my pipeline illustrated below.
+I experimented with augmentations from RawBoost, but they did not yield improvements on train, val sets and public test the most important thing on test set. On my train I experienced problems with likely instability in convergence and a lack of time I had no time for experiments. Comparison of influence of RawBoost augmentations on **EER** metric on validation set for my pipeline illustrated below.
 
 <img src="images/image.png" width="438" height="377">
 
@@ -67,9 +67,11 @@ To address class imbalance weighted sampling with undersampling of the majority 
 ## **6. Results**
 The results table below shows the results of various submission on public test with their description. It is worth noting that the pretrained weights **AASIST2** and **AASSIST** differ in that **AASIST2** also contains weights for **wav2vec 2.0**, which is indicated by the symbol * in the table.
 
-| **Model**   | **Addons**                                   | **EER** |
-|-------------|----------------------------------------------|----------------|
-| Baseline    | —                                            | 1.49447        |
-| AASIST      | Pretrained weights                          | 0.96636        |
-| AASIST2     | Pretrained weights*                         | 0.53358        |
-| AASIST2     | Pretrained weights* + ASVspoof 2021 data + AM-Softmax | 0.23140        |
+| **Model**   | **Addons**                                   | **Public EER** | **Private EER** |
+|-------------|----------------------------------------------|----------------|-----------------|
+| Baseline    | —                                            | 1.49447        | -               |
+| AASIST      | Pretrained weights                           | 0.96636        | -               |
+| AASIST2     | Pretrained weights*                          | 0.53358        | -               |
+| AASIST2     | Pretrained weights* + ASVspoof 2021 data + AM-Softmax | 0.23140        | 39.03  |
+| AASIST2     | Pretrained weights* + ASVspoof 2021 data + AM-Softmax + RawBoost Augmentations | 1.10166 | 26.00 |
+
