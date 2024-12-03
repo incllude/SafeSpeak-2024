@@ -67,7 +67,7 @@ To address class imbalance weighted sampling with undersampling of the majority 
 ## **6. Results**
 The results table below shows the results of various submission on public test with their description. It is worth noting that the pretrained weights **AASIST2** and **AASSIST** differ in that **AASIST2** also contains weights for **wav2vec 2.0**, which is indicated by the symbol * in the table.
 
-| **Model**   | **Addons**                                   | **Public EER** |
+| **Model**   | **Addons**                                   | **EER** |
 |-------------|----------------------------------------------|----------------|
 | Baseline    | —                                            | 1.49447        |
 | AASIST      | Pretrained weights                          | 0.96636        |
