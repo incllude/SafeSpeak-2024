@@ -46,7 +46,7 @@ I experimented with augmentations from RawBoost, but they did not yield improvem
 
 ## **4. Model Architecture**
 The backbone of our solution is the **AASIST2** model, enhanced with pretrained representations:
-1. **XLS-R:** Pretrained wav2vec features for robust audio representation.
+1. **XLS-R:** Self-supervised pretrained wav2vec model for robust audio representation.
 2. **AASIST (v1):** Pretrained weights for initializing the core model.
 
 ## **5. Training**
